@@ -1,0 +1,164 @@
+
+    <div class="top-menu-secondary">
+    <ul>
+        <li id="home" class="active">
+        <a href="/">Home</a>
+        </li>
+        <li id="about">
+        <a href="/about">About Us</a>
+        </li>
+        <li id="services">
+        <a href="/">Services</a>
+        </li>
+        <li id="login">
+        <a href="/login">Login</a>
+        </li>
+    </ul>
+    <div class="top-menu-controls">
+        <a class="mr-2 mb-2 btn btn-primary btn-rounded" href="/posting" style=" box-shadow:1px 1px 5px black"> 
+            <i class="picons-thin-icon-thin-0317_send_post_paper_plane" style="margin-right:10%"></i> Post Your Ad! 
+        </a>
+        <!--------------------
+        START - Messages Link in secondary top menu
+        -------------------->
+        {{!-- <div class="messages-notifications os-dropdown-trigger os-dropdown-center" style="display:none;">
+        <i class="os-icon os-icon-mail-14"></i>
+        <div class="new-messages-count">
+            12
+        </div>
+        <div class="os-dropdown light message-list">
+            <div class="icon-w">
+            <i class="os-icon os-icon-mail-14"></i>
+            </div>
+            <ul>
+            <li>
+                <a href="#">
+                <div class="user-avatar-w">
+                    <img alt="" src="img/avatar1.jpg">
+                </div>
+                <div class="message-content">
+                    <h6 class="message-from">
+                    John Mayers
+                    </h6>
+                    <h6 class="message-title">
+                    Account Update
+                    </h6>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <div class="user-avatar-w">
+                    <img alt="" src="img/avatar2.jpg">
+                </div>
+                <div class="message-content">
+                    <h6 class="message-from">
+                    Phil Jones
+                    </h6>
+                    <h6 class="message-title">
+                    Secutiry Updates
+                    </h6>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <div class="user-avatar-w">
+                    <img alt="" src="img/avatar5.jpg">
+                </div>
+                <div class="message-content">
+                    <h6 class="message-from">
+                    Bekky Simpson
+                    </h6>
+                    <h6 class="message-title">
+                    Vacation Rentals
+                    </h6>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <div class="user-avatar-w">
+                    <img alt="" src="img/avatar4.jpg">
+                </div>
+                <div class="message-content">
+                    <h6 class="message-from">
+                    Alice Priskon
+                    </h6>
+                    <h6 class="message-title">
+                    Payment Confirmation
+                    </h6>
+                </div>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div> --}}
+        <!--------------------
+        END - Messages Link in secondary top menu
+        --------------------><!--------------------
+        START - Settings Link in secondary top menu
+        -------------------->
+        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-center" style="display:none;">
+            <a href="/account" ><i class="os-icon os-icon-ui-46"></i></a>
+        </div>
+        <!--------------------
+        END - Settings Link in secondary top menu
+        --------------------><!--------------------
+        START - User avatar and menu in secondary top menu
+        -------------------->
+        <div class="logged-user-w" style="display: none;">
+        <div class="logged-user-i">
+            <div class="avatar-w">
+            <img alt="" src="/img/user.png">
+            </div>
+            <div class="logged-user-menu">
+            <div class="logged-user-avatar-info">
+                <div class="avatar-w">
+                <img alt="" src="/img/user.png">
+                </div>
+                <div class="logged-user-info-w">
+                <div class="logged-user-name">
+                    {{user.first_name}}
+                </div>
+                <div class="logged-user-role">
+                    {{user.last_name}}
+                </div>
+                </div>
+            </div>
+            <div class="bg-icon">
+                <i class="os-icon os-icon-wallet-loaded"></i>
+            </div>
+            <ul>
+                <li>
+                <a href="apps_email.html"><i class="os-icon os-icon-mail-01"></i><span>Incoming Mail</span></a>
+                </li>
+                <li>
+                <a href="/account"><i class="os-icon os-icon-user-male-circle2"></i><span>Profile Details</span></a>
+                </li>
+                <li>
+                <a href="users_profile_small.html"><i class="os-icon os-icon-coins-4"></i><span>Billing Details</span></a>
+                </li>
+                {{!-- <li>
+                <a href="#"><i class="os-icon os-icon-others-43"></i><span>Notifications</span></a>
+                </li> --}}
+                <li>
+                <a href="/logout"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <!--------------------
+        END - User avatar and menu in secondary top menu
+        -------------------->
+    </div>
+    </div>
+    {{#if user}}
+        <script> 
+            $('#login').hide();
+            $('.logged-user-w').show();
+            $('.messages-notifications').show();
+            $('.top-settings').show();
+        </script>
+    {{/if}}

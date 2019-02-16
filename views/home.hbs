@@ -1,0 +1,390 @@
+<style type="text/css">
+    .input-group-addon{
+        background-color:#047bf8;
+        color:white;
+    }
+    .elment-box{
+
+    }
+    .el-legend .legend-pin {
+        margin-right: 0.1rem;
+    margin-left: 0.7rem;
+    }
+    .el-tablo{
+    height: 220px;
+    }
+    .el-tablo .value{
+    font-size: 30px;
+    }
+    .el-tablo:hover .iconCircle{
+    color: #fff;
+    transform: rotateY(360deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    
+    }
+    .el-tablo:hover .iconCircle2{
+    color: #fff;
+    transform: rotateY(360deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    
+    }
+    .el-tablo:hover .iconCircle3{
+    color: #fff;
+    transform: rotateY(360deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    
+    }
+    .el-tablo:hover .iconCircle4{
+    color: #fff;
+    transform: rotateY(360deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in;
+    
+    }
+    .el-tablo:hover .label{
+
+    color: #fff;
+
+    }
+    .class1 {
+        padding: 1rem 2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 rgb(28,111,181);
+        -webkit-transition: all ease 0.8s;
+    }
+    .class1:hover {
+    box-shadow: inset 0 -300px 1px 0 rgb(28,111,181);
+    color: #fff;
+}
+    .class2 {
+        padding: 1rem 2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 rgb(0,195,103);
+        -webkit-transition: all ease 0.8s;
+    }
+    .class2:hover {
+    box-shadow: inset 0 -300px 1px rgb(0,195,103);
+    color: #fff;
+}
+
+    .class3 {
+        padding: 1rem 2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 rgb(252, 146, 87);
+        -webkit-transition: all ease 0.8s;
+    }
+    .class3:hover {
+    box-shadow: inset 0 -300px 1px 0 rgb(252, 146, 87);
+    color: #fff;
+}
+
+    .class4 {
+        padding: 1rem 2rem;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 rgb(211, 0, 47);
+        -webkit-transition: all ease 0.8s;
+    }
+    .class4:hover {
+    box-shadow: inset 0 -300px 1px 0 rgb(211, 0, 47);
+    color: #fff;
+}
+#dashIcon{
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.6);
+    bottom: 15px;
+    right: 16px;
+}
+.iconCircle, .iconCircle2, .iconCircle3, .iconCircle4 { 
+    top: 0 auto;   
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    width: 110px;
+    height: 110px;
+    line-height: 115px;
+    text-align: center;
+    color: rgb(255,255,255);
+    font-size:45px;
+    -webkit-transition: all ease 0.8s;
+    }
+
+    
+.iconCircle{ 
+    background-color: rgb(28,111,181);
+    }
+
+.iconCircle2{ 
+    background-color: rgb(0,195,103);
+    }
+
+.iconCircle3{ 
+    background-color: rgb(252, 146, 87);
+    }
+
+.iconCircle4{ 
+    background-color: rgb(211, 0, 47);
+    }
+
+    .class1:hover .iconCircle{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    transition: .5s ease-out; 
+    } 
+    .class2:hover .iconCircle2{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    transition: .5s ease-out; 
+    } 
+    .class3:hover .iconCircle3{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    transition: .5s ease-out; 
+    } 
+    .class4:hover .iconCircle4{
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    transition: .5s ease-out; 
+    } 
+    .heading-box{
+    padding-top: 20px;
+    text-align: right;
+    }
+</style>
+<div class="content-box">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="element-wrapper">
+                <h3 class="element-header">
+                    Services
+                </h3>
+                <div class="row" id="mainDiv">
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class1" onClick="window.open('/products/properties');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle">
+                            <i class="picons-thin-icon-thin-0047_home_flat"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Properties
+                            </div>
+                            <div class="label">
+                                Properties
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class2" onClick="window.open('/products/used-cars');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle2">
+                            <i class="picons-thin-icon-thin-0468_car_transport_vehicle"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Used Cars
+                            </div>
+                            <div class="label">
+                                Used Cars
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class3" onClick="window.open('/products/furnitures');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle3">
+                            <i class="picons-thin-icon-thin-0681_drawing_board_canvas_table"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Furnitures
+                            </div>
+                            <div class="label">
+                                Furnitures
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class4" onClick="window.open('/products/jobs');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle4">
+                            <i class="ti-briefcase"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Jobs
+                            </div>
+                            <div class="label">
+                                Jobs
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class1" onClick="window.open('/products/electronic-appliances');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle">
+                            <i class="picons-thin-icon-thin-0592_tv_televison_movie_news"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Electronics
+                            </div>
+                            <div class="label">
+                                Electronic Appliances 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class2" onClick="window.open('/products/mobiles');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle2">
+                            <i class="picons-thin-icon-thin-0289_mobile_phone_call_ringing_nfc"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Mobiles
+                            </div>
+                            <div class="label">
+                                Mobiles
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class3" onClick="window.open('/products/bikes');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle3">
+                            <i class="picons-thin-icon-thin-0475_bike_bycicle_transport"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Bikes
+                            </div>
+                            <div class="label">
+                                Bikes
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class4" onClick="window.open('/products/books');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle4">
+                            <i class="icon-graduation"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Books & Sports
+                            </div>
+                            <div class="label">
+                                Books, Sports & Hobies
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-sm-4">
+                    <div style="box-shadow: 2px 2px 10px gray;">
+                    <div class="element-box el-tablo class1" onClick="window.open('/products/fashion');">
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left:35%">
+                            <span class="iconCircle">
+                            <i class="picons-thin-icon-thin-0848_shoes_gear_fitness_running"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12">                            
+                            <div class="heading-box text-center">
+                            <div class="value">
+                                Fashion
+                            </div>
+                            <div class="label">
+                                Fashion
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#searchInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#mainDiv .col-sm-4").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>

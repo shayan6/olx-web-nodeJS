@@ -1,0 +1,143 @@
+
+    <div class="all-wrapper rentals">
+      <div class="rentals-list-w">
+        <!--------------------
+        START - Property Index Filters
+        -------------------->
+        <!--------------------
+        END - Property Index Filters
+        -------------------->
+        <div class="rentals-list">
+          <div class="list-controls"  style="display:none;">
+            <div class="list-info">
+              1,240 Properties found in Brooklyn, NY
+            </div>
+            <div class="list-order">
+              <label for="">Order By:</label><select>
+                <option>
+                  Relevance
+                </option>
+                <option>
+                  Date
+                </option>
+                <option>
+                  Price
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="property-items as-grid">
+            <!--------------------
+            START - Property Item
+            -------------------->
+            {{#each product}}
+            <div class="property-item">
+              <a class="item-media-w" href="javascript:void(0)">
+                <div class="item-media" style="background-image: url(/uploads/{{imagePath}})"></div>
+              </a>
+              <div class="item-info">
+                <div class="item-features">
+                  <div class="feature">
+                    {{user.city}}
+                  </div>
+                  <div class="feature">
+                    Pakistan
+                  </div>
+                </div>
+                <h3 class="item-title">
+                  <a href="javascript:void(0)">{{title}}</a>
+                </h3>
+                <div class="item-reviews">
+                  {{description}}
+                </div>
+                <div class="item-price-buttons">
+                  <div class="item-price">
+                    <strong>Rs. {{price}}</strong><span></span>
+                  </div>
+                  <div class="item-buttons">
+                    <a class="btn btn-outline-primary" href="javascript:void(0)" onclick="editModel('{{_id}}', '{{user._id}}', '{{../user._id}}');" ><span>Details</span><i class="os-icon os-icon-arrow-2-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal{{_id}}" role="dialog" tabindex="-1">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Posted By
+                    </h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true"> &times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3 text-right" for="">Name</label>
+                        <div class="col-sm-7">
+                        <input class="form-control" name="first_name" placeholder="Enter Name" type="Name" value="{{user.first_name}}" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3 text-right" for=""> Phone</label>
+                        <div class="col-sm-7">
+                        <input class="form-control" name="phone" placeholder="Enter Phone" type="number" value="{{user.phone}}" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3 text-right" for=""> City</label>
+                        <div class="col-sm-7">
+                        <input class="form-control" name="city" placeholder="Enter City" type="text" value="{{user.city}}" readonly="readonly">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Close</button>
+                    {{#if ../user}}
+                      <button class="btn btn-primary button{{_id}}" type="submit">Let's Chat</button>
+                    {{else}}
+                      <button class="btn btn-success" onClick="window.open('/login');" type="submit">Login To Chat</button>
+                    {{/if}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+            <script>
+              function editModel(id, productUser, userId){
+                if(productUser == userId){
+                  $(".button"+id).html('Manage Ad').removeClass('btn-primary').addClass('btn-success');
+                }    
+                $("#exampleModal"+id).modal('show');
+              }
+            </script>
+            <!--------------------
+            END - Property Item
+            -------------------->
+          </div>
+          <div class="pagination-w" style="display:none;">
+            <div class="pagination-info">
+              Showing 20-40 Properties found in Brooklyn, NY
+            </div>
+            <div class="pagination-links">
+              <ul class="pagination">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#"> Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#"> 1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#"> 2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#"> 3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#"> Next</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{> search-function}}
